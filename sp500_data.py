@@ -3,7 +3,11 @@ from pymongo import MongoClient
 import pandas as pd
 
 # Connexion à MongoDB
-client = MongoClient('mongodb+srv://haddadfayssal75:K5mg1DdBUE5OfTS6@cluster0.0xesz.mongodb.net/financial_data?retryWrites=true&w=majority')
+# Charger les variables d'environnement depuis le fichier .env
+load_dotenv()
+
+# Récupérer la variable d'environnement pour MongoDB
+client = MongoClient(os.getenv("MONGODB_URI"))
 db = client['financial_data']
 collection = db['sp500_data']  # Nouvelle collection pour le S&P 500
 
