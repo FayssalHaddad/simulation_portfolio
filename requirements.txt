@@ -1,0 +1,9 @@
+pandas
+yfinance
+pymongo
+fastapi
+uvicorn
+streamlit
+plotly
+datetime
+matplotlib
